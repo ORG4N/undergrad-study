@@ -1,0 +1,45 @@
+﻿@page
+@model COMP2001_Task2.Pages.library_borrowersModel
+@{
+        ViewData["Title"] = "Library Borrowers RDF";
+        Layout = null;
+}
+
+<pre id="json"></pre>
+<pre id="json2">                    </pre>
+
+
+<script>
+
+    fetchBorrowers();
+
+
+    async function fetchBorrowers() {
+        const url = "http://localhost:24474/api/borrowers";
+        const raw = await fetch(url);
+
+        const data = await raw.json();
+
+        document.getElementById("json").textContent = '{ "@@context" : { "Place" : "http://schema.org", "borrower" : "http://web.socem.plymouth.ac.uk" }, "Place" : [ ';
+
+        data.slice(1).forEach(({ library, age0to4, age5to11, age12to17, age18to59, age60to100 }) => {
+
+            document.getElementById("json2").textContent += `{
+                "name" : "${library}",
+                "borrower:AgeRange" : {
+                    "0-4" : ${age0to4},
+                    "5-11" : ${age5to11},
+                    "12-17" : ${age12to17},
+                    "18-59" : ${age18to59},
+                    "60-100" : ${age60to100}
+                }
+            },`
+
+        });
+
+        var str = document.getElementById("json2").textContent.slice(0, -1);
+        document.getElementById("json2").textContent = str;
+        document.getElementById("json2").textContent += "]}";
+
+    }
+</script>

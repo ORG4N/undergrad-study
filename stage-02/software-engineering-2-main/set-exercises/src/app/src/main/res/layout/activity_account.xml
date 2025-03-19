@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_back"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="60dp" />
+
+            <Button
+                android:id="@+id/burger"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/button_back"
+                android:textColor="@color/white"
+                android:text="..."
+                android:onClick="burgermenu"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/heading_back"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="My Account"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            >
+
+            <TableRow
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:text="Forename"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="PLACEHOLDER"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:text="Surname"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="PLACEHOLDER"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:text="Email"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="PLACEHOLDER"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:text="Tel Number"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="PLACEHOLDER"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+            <TableRow
+                android:layout_marginVertical="5dp">
+                <TextView
+                    android:text="Address"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:padding="3dip" />
+                <TextView
+                    android:text="PLACEHOLDER"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="HOME"
+            android:backgroundTint="@color/button_back"
+            android:textColor="@color/white"
+            android:onClick="goToHome"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

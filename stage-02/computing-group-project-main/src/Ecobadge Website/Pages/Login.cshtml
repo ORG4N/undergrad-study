@@ -1,0 +1,101 @@
+﻿@page
+@model Ecobadge_Website.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/login.css")" rel="stylesheet" type="text/css" />
+}
+
+<div class="wrapper">
+    <div class="container text-center">
+        <h1>Log In</h1>
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <input type="email" class="form-control" placeholder="Email" id="emailUsername">
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <input type="password" class="form-control" placeholder="Password" id="password">
+        <div class="input-group-append">
+            <button class="btn btn-primary btn-dark" type="button" id="loginBtn">SUBMIT</button>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="wrapper" style="padding-top:20px">
+    <div class="container text-center">
+        <h1>Not a member? Sign up:</h1>
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <input type="text" class="form-control" placeholder="Forename" id="forename">
+        <input type="text" class="form-control" placeholder="Surname" id="surname">
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <input type="email" class="form-control" placeholder="Email" id="email">
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+            <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose Account Type...</option>
+            <option value="1">Free member - (recommended for Personal use)</option>
+            <option value="2">Paid member - (recommended for Businesses)</option>
+            </select>
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <input type="password" class="form-control" placeholder="Password" id="password">
+        <input type="password" class="form-control" placeholder="Confirm Password" id="password2">
+    </div>
+
+    <div class="input-group input-group-lg mx-auto" style="padding-top:5px">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="mail">
+            <label class="form-check-label" for="flexCheckDefault">
+                I would like to subscribe to the ECO Badge mailing list
+            </label>
+        </div>
+    </div>
+
+    <div class="input-group input-group-lg mx-auto">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="mail">
+            <label class="form-check-label" for="flexCheckDefault">
+                    I agree to the <a href="#" data-toggle="modal" data-target="#terms"> Terms and Conditions</a>
+            </label>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center" style="padding:15px">
+        <button type="button" class="btn btn-dark" style="width:40%">Create Account</button>
+    </div>
+
+</div>
+
+<div class="modal fade" id="terms" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Terms and Conditions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec ultrices tincidunt arcu non sodales neque sodales ut. Non odio euismod lacinia at quis risus sed vulputate. Commodo nulla facilisi nullam vehicula ipsum a. Pretium fusce id velit ut tortor. Gravida dictum fusce ut placerat orci nulla. Arcu odio ut sem nulla pharetra. Ac turpis egestas maecenas pharetra. Neque egestas congue quisque egestas diam in arcu cursus. Morbi tristique senectus et netus et malesuada fames. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus. Morbi tempus iaculis urna id volutpat lacus laoreet. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien. Risus ultricies tristique nulla aliquet enim tortor at auctor. Accumsan tortor posuere ac ut consequat semper viverra nam libero.
+                    Dui vivamus arcu felis bibendum. At urna condimentum mattis pellentesque id nibh. Urna cursus eget nunc scelerisque viverra mauris. Ornare massa eget egestas purus viverra. Massa vitae tortor condimentum lacinia quis vel. Amet consectetur adipiscing elit duis tristique sollicitudin. Risus pretium quam vulputate dignissim suspendisse in. In hac habitasse platea dictumst vestibulum rhoncus. Ut etiam sit amet nisl purus in. Quis lectus nulla at volutpat diam ut venenatis. Amet consectetur adipiscing elit pellentesque. At elementum eu facilisis sed. Maecenas accumsan lacus vel facilisis volutpat est velit egestas dui. Nunc pulvinar sapien et ligula. Tortor at auctor urna nunc id cursus metus aliquam eleifend.
+                    Est ullamcorper eget nulla facilisi etiam dignissim diam quis. Tortor consequat id porta nibh venenatis cras sed felis. Quisque id diam vel quam elementum pulvinar. Blandit cursus risus at ultrices mi tempus. Volutpat diam ut venenatis tellus in metus vulputate eu. Sit amet porttitor eget dolor morbi non arcu risus quis. Lacinia at quis risus sed vulputate odio ut enim blandit. At tempor commodo ullamcorper a. Amet volutpat consequat mauris nunc congue nisi. Non curabitur gravida arcu ac tortor dignissim convallis. Enim tortor at auctor urna nunc id cursus metus aliquam. Aenean et tortor at risus viverra adipiscing at in. Pellentesque pulvinar pellentesque habitant morbi tristique. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Est lorem ipsum dolor sit amet. Imperdiet sed euismod nisi porta lorem mollis. Consectetur adipiscing elit ut aliquam. Volutpat sed cras ornare arcu dui vivamus.
+                    At quis risus sed vulputate. Rhoncus urna neque viverra justo nec ultrices dui sapien. Nisi est sit amet facilisis magna etiam tempor orci. Ut consequat semper viverra nam libero justo laoreet sit amet. Pellentesque adipiscing commodo elit at imperdiet dui. Egestas tellus rutrum tellus pellentesque. Sit amet massa vitae tortor. Ante in nibh mauris cursus mattis molestie a. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Lorem ipsum dolor sit amet. Vitae purus faucibus ornare suspendisse sed nisi lacus. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Et tortor at risus viverra adipiscing at in tellus integer. Consequat interdum varius sit amet mattis vulputate enim nulla.
+                    Nisl nisi scelerisque eu ultrices vitae auctor. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Tristique magna sit amet purus gravida quis blandit. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Commodo nulla facilisi nullam vehicula ipsum a arcu. Eu turpis egestas pretium aenean pharetra magna. Tincidunt vitae semper quis lectus. Ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Varius morbi enim nunc faucibus a pellentesque sit. Vel turpis nunc eget lorem. Quis blandit turpis cursus in hac habitasse. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Suspendisse in est ante in nibh mauris cursus. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Sit amet mattis vulputate enim.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

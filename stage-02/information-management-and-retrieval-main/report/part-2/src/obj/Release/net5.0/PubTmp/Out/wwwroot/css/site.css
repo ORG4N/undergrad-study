@@ -1,0 +1,26 @@
+﻿html, body {
+    margin: 0;
+    height: 100%;
+    background-image: url("../img/custom-library.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main{
+    height:100%
+}
+
+.content{
+    background-color: #fffdd0;
+}
+
+.title{
+    font-size: 1.5em;
+    padding-top:20px;
+    padding-bottom: 15px;
+}
+
+.desc{
+    font-size: 0.9em;
+}

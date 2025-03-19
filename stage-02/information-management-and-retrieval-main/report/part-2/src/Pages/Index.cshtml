@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="container-fluid row">
+    <div class="col-3 content my-3">
+        <div class="title text-center"> Welcome</div>
+
+        <hr class="my-3">
+
+        <div class="desc">
+            <div class="text-left py-2">
+                This web-application has been made to show difference in age between active borrowers within each of Plymouth's main libraries .
+            </div>
+            <div class="text-left py-2">
+                The data-set was created in 2018, and only shows the popularity of active library users for that specific year.
+            </div>
+            <div class="text-left py-2">
+                Author: Claire Beck <br>
+                Source: Plymouth Council
+            </div>
+        </div>
+
+        <hr class="my-3">
+
+        <div class="desc">
+            <div class="text-center"><a href="https://plymouth.thedata.place/dataset/active-library-users-by-age">
+                Click here to access the source for the data-set used within this project.</a>
+            </div>
+        </div>
+
+        <hr class="my-3">
+
+        <div class="desc">
+            <div class="text-center"><a asp-area="" asp-page="/Borrowers">
+                Alternatively, click here to preview the JSON-LD markup for all the data.</a>
+            </div>
+        </div>
+
+        <hr class="my-3">
+
+        <a type="button" class="btn btn-secondary btn-block mb-3" asp-area="" asp-page="/Data">View data</a>
+
+    </div>
+</div>

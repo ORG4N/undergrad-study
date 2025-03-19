@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\datgu\Desktop\Publish</_PublishTargetUrl>
+    <History>True|2022-01-23T21:55:47.9757759Z;True|2022-01-23T21:47:25.8348513+00:00;True|2022-01-23T21:32:22.7857263+00:00;True|2022-01-23T21:22:56.2570471+00:00;True|2022-01-23T20:59:43.9034210+00:00;True|2022-01-23T20:33:59.8890974+00:00;True|2022-01-23T20:26:56.1613130+00:00;True|2022-01-23T20:21:16.3463621+00:00;True|2022-01-23T20:21:05.5301452+00:00;True|2022-01-23T20:13:52.3047833+00:00;True|2022-01-23T20:06:01.0119791+00:00;True|2022-01-23T19:57:51.7130499+00:00;True|2022-01-23T19:54:33.9266984+00:00;True|2022-01-23T19:50:33.9622839+00:00;True|2022-01-23T19:48:10.8183445+00:00;True|2022-01-23T19:44:01.6025248+00:00;True|2022-01-23T19:40:47.9985507+00:00;True|2022-01-23T19:21:21.2622527+00:00;</History>
+  </PropertyGroup>
+</Project>

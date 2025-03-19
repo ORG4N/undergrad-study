@@ -1,0 +1,58 @@
+﻿@page
+@model COMP2001_Task2.Pages.DataModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="table-responsive mt-3">
+        <div class="table-wrapper">
+
+            <table class="table table-hover table-dark" style="margin-bottom:0" id="businesses">
+
+                <thead>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+<script>
+    fetchBorrowers();
+
+    async function fetchBorrowers() {
+    const url = "http://localhost:24474/api/borrowers";
+    const raw = await fetch(url);
+    const data = await raw.json();
+
+    var count = 0;
+
+    data.forEach(({ library, age0to4, age5to11, age12to17, age18to59, age60to100 }) => {
+        if (count == 0) {
+            $("#businesses").find('thead').append(`<tr>
+                    <th>${library}</th>
+                    <th>${age0to4}</th>
+                    <th>${age5to11}</th>
+                    <th>${age12to17}</th>
+                    <th>${age18to59}</th>
+                    <th>${age60to100}</th>
+                    </tr>`);
+            count++;
+        }
+        else {
+            $("#businesses").find('tbody').append(`<tr>
+                    <td>${library}</td>
+                    <td>${age0to4}</td>
+                    <td>${age5to11}</td>
+                    <td>${age12to17}</td>
+                    <td>${age18to59}</td>
+                    <td>${age60to100}</td>
+                    </tr>`);
+            }
+        });
+    }
+</script>

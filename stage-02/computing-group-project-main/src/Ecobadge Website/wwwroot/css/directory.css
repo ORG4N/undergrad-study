@@ -1,0 +1,29 @@
+﻿.text-container {
+    background-color: #EEEEEE;
+    padding: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 10px;
+}
+
+.table td {
+    border-bottom: 1px solid #b37a8d;
+    font-size: 0.8vw;
+    font-weight: 500;
+    width: 20%;
+    cursor: pointer;
+}
+
+.table thead th {
+    border-top: none;
+    border-bottom: 2px solid #b37a8d;
+    font-size: 0.85vw;
+    color: #364a64;
+    background-color: #ffb6ce;
+    font-weight: bold;
+    width: 20%;
+}
+
+.table-wrapper {
+    padding: 20px 25px;
+}

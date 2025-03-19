@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_back"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="60dp" />
+
+            <Button
+                android:id="@+id/burger"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:backgroundTint="@color/button_back"
+                android:textColor="@color/white"
+                android:text="..."
+                android:onClick="burgermenu"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/heading_back"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Accommodation Listings"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="25dp"
+                android:id="@+id/table">
+
+                <TableRow
+                    android:layout_marginVertical="10dp"
+                    android:clickable="true"
+                    android:onClick="goToVenue">
+                <TextView
+                        android:text="Barn"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="AVAILABLE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:padding="3dip" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginVertical="10dp"
+                    android:clickable="true"
+                    android:onClick="goToVenue">
+                    <TextView
+                        android:text="Farmhouse 1"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="AVAILABLE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:padding="3dip" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginVertical="10dp"
+                    android:clickable="true"
+                    android:onClick="goToVenue">
+                    <TextView
+                        android:text="Farmhouse 2"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="AVAILABLE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:padding="3dip" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginVertical="10dp"
+                    android:clickable="true"
+                    android:onClick="goToVenue">
+                    <TextView
+                        android:text="Farmhouse 3"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="AVAILABLE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:padding="3dip" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginVertical="10dp"
+                    android:clickable="true"
+                    android:onClick="goToVenue">
+                    <TextView
+                        android:text="Hut"
+                        android:textSize="30dp"
+                        android:textColor="@color/black"
+                        android:padding="3dip" />
+                    <TextView
+                        android:text="UNAVAILABLE"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:gravity="right"
+                        android:padding="3dip" />
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="SELECT A LISTING TO VIEW ADDITIONAL INFORMATION"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginVertical="10dp"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

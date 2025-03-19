@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_back"
+            android:gravity="center"
+            android:paddingVertical="20dp"
+            android:text="PROJECT MANAGER"
+            android:textColor="@color/black"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_back_bar"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="35dp"
+            android:text="UPDATE PROJECT"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="30dp"/>
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="1"
+            android:layout_marginHorizontal="25dp"
+            android:id="@+id/table">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Forename:"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/forename"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Surname:"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/surname"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="Student ID:"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/student"
+                    android:text=""
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:padding="3dp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="#000000"
+            android:layout_marginHorizontal="30dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/inputTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="25dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="10dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Title"
+                    android:text=""
+                    android:background="@drawable/input_text"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="361dp" />
+
+                <EditText
+                    android:id="@+id/inputDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="100dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="10dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Description"
+                    android:text=""
+                    android:background="@drawable/input_text"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="361dp" />
+
+                <EditText
+                    android:id="@+id/inputYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="10dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Year"
+                    android:text=""
+                    android:background="@drawable/input_text"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="361dp" />
+
+                <EditText
+                    android:id="@+id/inputImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginVertical="10dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:hint="Image"
+                    android:text=""
+                    android:background="@drawable/input_text"
+                    tools:layout_editor_absoluteX="89dp"
+                    tools:layout_editor_absoluteY="361dp" />
+                </LinearLayout>
+            </ScrollView>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="10dp"
+            android:text="Submit changes"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:onClick="submitUpdate"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginBottom="10dp"
+            android:text="HOME"
+            android:backgroundTint="@color/button_back"
+            android:textColor="@color/white"
+            android:onClick="homeButton"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

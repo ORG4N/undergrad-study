@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Homepage";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/index.css")" rel="stylesheet" type="text/css" />
+}
+
+<div class="row info-wrapper">
+
+    <div class="col-3">
+        <img src="assets/logo@4x.png" class="img-fluid" alt="Image">
+    </div>
+
+    <div class="col-9 info-container">
+        @*//--------------------------------------------------------eco-councious community--------------------------------------------------------*@
+        <div class="text-center info-title">Supporting an eco-conscious community</div>
+
+        @*//--------------------------------------------------------eco-concious community textblock--------------------------------------------------------*@
+        <span>
+            ECO Badge is a certification platform which scores food establishments (restaurants,
+            cafe, cafeterias, takeaways) based on their environmental impact, providing
+            consumers with access to a directory of environmentally certified businesses in their
+            area. Once a business receives their ECO Badge score, they are listed under a
+            grading tier (bronze, silver, gold or platinum) and added to the business directory.
+            ECO Badge’s directory will be populated with environmental and community
+            conscious food establishments.
+        </span>
+
+        <div class="row info-btns">
+            <div class="col">
+                <a type="button" class="btn btn-success btn-block" asp-area="" asp-page="/About_us">Find out more</a>
+            </div>
+            <div class="col">
+                <a type="button" class="btn btn-success btn-block" asp-area="" asp-page="/Directory">View directory</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center tiers-wrapper">
+    @*//--------------------------------------------------------Our Tiers--------------------------------------------------------*@
+    <div class="wrapper">
+        <h1>Our Tiers</h1>
+    </div>
+
+    <div style="display: flex; justify-content: space-around">
+        <div class="col-sm-2">
+            <img src="assets/seed@4x.png" class="img-fluid" style="width:100%" alt="Image">
+            <p>The Lowest Tier</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="assets/seedling@4x.png" class="img-fluid" style="width:100%" alt="Image">
+            <p>The Second Lowest Tier</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="assets/sapling@4x.png" class="img-fluid" style="width:100%" alt="Image">
+            <p>The Second Highest Tier</p>
+        </div>
+        <div class="col-sm-2">
+            <img src="assets/tree@4x.png" class="img-fluid" style="width:100%" alt="Image">
+            <p>The Highest Tier</p>
+        </div>
+    </div>
+
+</div>

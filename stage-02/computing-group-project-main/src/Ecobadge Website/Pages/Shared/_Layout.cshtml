@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ECO Badge</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/layout.css" />
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-page="/Index">
+                <img src="~/assets/Asset 1@3x.png" height="30" alt="Logo">
+                <small>ECO Badge</small> 
+            </a>
+
+            <ul class="nav navbar-nav abs-center-x">
+                <li class="nav-item"> <a class="nav-link" asp-area="" asp-page="/Index">Home</a> </li>
+                <li class="nav-item"> <a class="nav-link" asp-area="" asp-page="/Directory">Directory</a> </li>
+                <li class="nav-item"> <a class="nav-link" asp-area="" asp-page="/About_us">About us</a> </li>
+            </ul>
+
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item"> <a class="nav-link" asp-area="" asp-page="/Login">Login</a> </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="parent">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark text-white mt-auto">
+
+        <div class="container-fluid"  style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="row">
+                <ul class="list-unstyled text-small" style="padding:10px; margin:0">
+                <li style="font-size:10px">Contact Email: info.ECO Badge@gmail.com</li>
+                <li style="font-size:10px">Terms and Conditions</li>
+                <li style="font-size:10px">Subscribe to mailing list</li>
+            </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Styles", required: false)
+</body>
+</html>
