@@ -1,0 +1,12 @@
+{
+  "Capacity": "80",
+  "OpeningTime": "00:00",
+  "ClosingTime": "23:00",
+  "MondayClosed": false,
+  "TuesdayClosed": true,
+  "WednesdayClosed": false,
+  "ThursdayClosed": false,
+  "FridayClosed": false,
+  "SaturdayClosed": true,
+  "SundayClosed": true
+}

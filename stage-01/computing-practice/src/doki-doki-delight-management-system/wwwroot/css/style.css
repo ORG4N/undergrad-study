@@ -1,0 +1,382 @@
+﻿body {
+    background-color: #ffaec9;     
+    overflow:hidden; 
+}
+
+h1 {
+    font-size: 9.5vw;
+    font-weight: bold;
+    text-decoration-line: underline;
+    text-decoration-color: #e29578;
+    text-align: center;
+    line-height: 100%;
+} 
+
+h2{
+    font-size: 7.5vw;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100%; 
+}
+
+h3{
+    font-size: 1.7vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+.row{
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.title{
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 3%;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    transform: translate(0px, 40px);
+    opacity: 0.5;
+}
+
+.nav-item{
+    background-color: #e492ad;
+    opacity: 1;
+}
+  
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: black;
+}
+  
+  
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}  
+  
+.card-title{
+    text-align: center;
+}
+
+.card{
+    background-color: #ffffff;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+
+#headingBox{
+    background-color: #c8bfe7;
+    text-align: center;
+    transform: translate(0px, -28px);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#card{
+    margin:0;
+}
+
+#continueButton{
+    width: 50%;
+}   
+
+.btn-primary{
+    background-color: #e29578;
+    border: black;
+}
+
+.btn-primary:hover{
+    background-color: #f6c5af;
+    color:black;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus{
+    background-color: black;
+    box-shadow: none;   
+}
+
+.btn-primary:not(:disabled):not(.disabled):focus{
+  box-shadow: none;
+}
+
+.staffbar {
+    background-color: #1D1E2C;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; /* Behind the navbar */
+    padding: 48px 0 0; /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .6);
+}
+
+.staffbar a {
+    color:#F7EBEC;  
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.staff-nav-header{
+    color:#DDBDD5;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 100%;
+    padding-bottom: 30px;
+}
+
+.staff-nav-sub-header{
+    color: #1D1E2C;
+    font-size: 1vw;
+    background-color: #DDBDD5;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.staff-nav-item-header{
+    color: #DDBDD5;
+    padding-left:20px;
+    font-size: 0.9vw;
+}
+
+.staff-nav-item{
+    padding-left:20px;
+    font-size: 0.8vw;
+}
+
+.staff-nav-item:hover{
+    background-color: #AC9FBB;
+}
+
+.staff-nav-section{
+    padding-top:50px;
+    padding-bottom: 25px;
+}
+
+.staff-nav-home{
+    text-align: center;
+    bottom:15px;
+    width:100%;
+    position:absolute;
+    background-color: #FF6663;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.feather #staffbar {
+    color: #F7EBEC;
+    padding-right: 15px;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+.table-title{
+    color:#F7EBEC;  
+    font-size: 1.4vw;
+    text-align: left;
+    background-color: #364a64;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin:-20px -25px 10px;
+}
+
+.booking-table{
+    background-color: #ffbed4;
+}
+
+.table-wrapper{
+    padding: 20px 25px;
+}
+
+.table-wrapper-2{
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.table td{
+    border-top:1px solid #b37a8d;
+    border-bottom:1px solid #b37a8d;
+    font-size: 0.8vw;
+    font-weight:500;
+    width: 20%;
+}
+
+.table thead th{
+    border-top:none;
+    border-bottom:2px solid #b37a8d;
+    font-size: 0.85vw;
+    color: #364a64;
+    background-color: #ffb6ce;
+    font-weight:bold;
+    width: 20%;
+}
+
+.hint-text{
+    border-top:3px dotted #b37a8d;
+    border-bottom:3px dotted #b37a8d;
+    font-size: 0.7vw;
+    font-weight: normal;
+    padding:5px;
+}
+
+.form-control:disabled, .form-control[readonly]{
+    background-color: white;
+}
+
+#add-booking-placeholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#add-booking-placeholder2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#remove-booking{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 55vh;
+}
+
+.form-title{
+    color:#F7EBEC;  
+    font-size: 1.4vw;
+    text-align: center;
+    background-color: #364a64;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.show-booking{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.field-header{
+    text-align:left;
+    direction: ltr;
+    padding-left: 25px;
+    font-size: 0.8vw;
+}
+
+.field-record{
+    text-align:right;
+    direction: rtl;
+    padding-right: 25px;
+    font-size: 0.75vw;
+}
+
+#confirmation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#reservation-count {
+    font-size: 0.7vw;
+    font-weight: normal;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.modal-dialog {
+    width:50%;
+    position:absolute;
+    right:10%;
+    top:5%;
+}
+
+.modal-backdrop {
+    opacity: 0 !important;
+}
+
+.modal-title {
+    font-size: 1.3vw;
+}
+
+.modal-record {
+    text-align: right;
+    padding-right: 25px;
+    font-size: 0.75vw;
+}
+
+.modal-item {
+    text-align: left;
+    direction: ltr;
+    padding-left: 25px;
+    font-size: 0.8vw;
+}
+
+.modal-header {
+    background-color: #da5334;
+}
+
+.modal-body {
+    padding-top:0;
+    padding-bottom:0;
+}
+
+.show-modal {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height:20%
+}
+
+.modal-lg {
+    max-width: 100% !important;
+}
+
+.amend-booking{
+    justify-content: center;
+    align-items: center;
+}
+
+
+#removeBookingButton.popover-header {
+    background-color: #dc3545;
+}
+
+.equal-column-height {
+    float: left;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+}
