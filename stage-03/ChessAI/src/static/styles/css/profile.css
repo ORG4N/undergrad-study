@@ -1,0 +1,312 @@
+#content {
+  display: flex;
+  gap: 25px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #3E3B39;
+  padding: 30px 50px;
+  color: #DBEAFE;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  color: #DBEAFE; /* old IE */
+  background-color: #DBEAFE; /* Modern Browsers */
+  width: 100%;
+}
+
+hr.thin {
+  height: 2px;
+  margin: 5px 0 10px 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.scrollable {
+  overflow-y: auto;
+}
+
+.recent-container {
+  background-color: #282727;
+  border: 0px;
+  border-radius: 8px;
+  padding: 20px 30px;
+  color: #FFFFFF;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+}
+
+.helper-container {
+  background-color: #A45A52;
+  border: 0px;
+  border-radius: 8px;
+  padding: 20px 30px;
+  color: #FFFFFF;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.load-container {
+  background-color: #312E2B;
+  border: 1px;
+  border-radius: 8px;
+  padding: 20px 30px;
+  color: #FFFFFF;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.win {
+  background-color: rgba(0, 150, 255, 0.7);
+}
+.win .indent {
+  background-color: rgb(0, 150, 255);
+}
+
+.lose {
+  background-color: rgba(255, 26, 0, 0.7);
+}
+.lose .indent {
+  background-color: rgb(255, 26, 0);
+}
+
+.draw {
+  background-color: rgba(168, 168, 168, 0.7);
+}
+.draw .indent {
+  background-color: rgb(168, 168, 168);
+}
+
+.ongoing {
+  background: linear-gradient(-45deg, #ee9b00, #cdb4db, #348aa7, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+.ongoing .indent {
+  background: linear-gradient(-45deg, #ee9b00, #cdb4db, #348aa7, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.game-container {
+  border: 0px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  flex-basis: 100%;
+  text-align: left;
+}
+.game-container .indent {
+  display: flex;
+  align-self: stretch;
+  width: 3%;
+  border: 0px;
+  border-radius: 8px 0px 0px 8px;
+}
+.game-container .participants {
+  flex: 100;
+  align-self: stretch;
+  align-items: center;
+}
+.game-container .participants .result {
+  flex-basis: 20%;
+}
+.game-container .performance {
+  align-self: stretch;
+  justify-content: center;
+}
+.game-container .performance .row {
+  height: 100%;
+  background-color: black;
+  padding: 10px;
+}
+.game-container .wrapper {
+  padding: 20px 30px 20px 10px;
+}
+.game-container .wrapper:nth-child(4) {
+  padding-right: 18px;
+}
+.game-container .wrapper .event {
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.game-container .wrapper .date {
+  font-size: small;
+  font-style: italic;
+}
+.game-container .wrapper .termination {
+  font-size: small;
+  font-weight: bold;
+}
+.game-container .wrapper .time {
+  font-size: small;
+}
+.game-container .wrapper .player {
+  font-size: small;
+  display: flex;
+  align-items: center;
+  flex-basis: 40%;
+  gap: 8px;
+}
+.game-container .wrapper .player .team {
+  font-size: small;
+}
+.game-container .wrapper .player .player-white {
+  border-top: 3px solid white;
+  padding-top: 5px;
+}
+.game-container .wrapper .player .player-black {
+  border-top: 3px solid black;
+  padding-top: 5px;
+}
+.game-container .wrapper .player .pic {
+  height: 32px;
+  width: 32px;
+}
+.game-container .wrapper .player .player-username {
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 0px;
+  border-radius: 8px;
+  padding: 40px 30px;
+  color: #FFFFFF;
+}
+.container:nth-child(1) {
+  flex: 30;
+  background-color: #312E2B;
+}
+.container:nth-child(2) {
+  flex: 70;
+  background-color: #1E1E1E;
+}
+.container .nogap {
+  gap: 0px !important;
+}
+.container .wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 30px;
+}
+.container .wrapper .col {
+  flex-direction: column !important;
+}
+.container .wrapper .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+  align-items: center;
+}
+.container .wrapper .row .middle {
+  justify-content: center;
+}
+.container .wrapper .row .left {
+  flex-basis: fit-content;
+}
+.container .wrapper .row .right {
+  justify-content: end;
+  flex-basis: fit-content;
+}
+.container .wrapper .row .item {
+  display: flex;
+  width: 100%;
+  align-self: stretch;
+}
+.container .wrapper .row .item #profile_biography {
+  word-break: break-all;
+}
+.container .wrapper .row .item #avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.container .wrapper .row .item .showing {
+  padding-top: 10px;
+  opacity: 0.7;
+}
+.container .wrapper .row .item .username {
+  font-size: x-large;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+}
+.container .wrapper .row .item .title {
+  font-size: medium;
+  font-weight: 600;
+}
+.container .wrapper .row .item .text {
+  font-size: small;
+}
+.container .wrapper .row .item .icon {
+  margin-top: 10px;
+  flex-basis: fit-content;
+}
+.container .wrapper .row .item .filter-btn {
+  background: rgb(15, 73, 28);
+  background: linear-gradient(90deg, rgb(15, 73, 28) 0%, rgba(16, 87, 35, 0.591456651) 30%, rgba(16, 86, 35, 0.5942577715) 70%, rgb(15, 73, 28) 100%);
+  width: 100%;
+  padding: 15px 15px;
+  text-transform: uppercase;
+}
+.container .wrapper .row .item .filter-btn:hover {
+  opacity: 90%;
+}
+.container .wrapper .row .item .button {
+  background-color: #0F491C;
+  text-decoration: none;
+  color: white;
+  padding: 15px 45px;
+  margin: 10px;
+  width: 100%;
+  border: 0px;
+  border-radius: 8px;
+}
+.container .wrapper .row .item .button:hover {
+  opacity: 0.7;
+}
+.container .wrapper .row button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: inherit;
+  color: white;
+  padding: 10px;
+}
+.container .wrapper .row button:hover {
+  color: gray;
+}
+.container .wrapper .row .selected {
+  border-bottom: solid white 2px;
+}
+.container .wrapper .row .selected:hover {
+  border-bottom-color: grey;
+}
+.container .wrapper .row .selected-btn {
+  border: solid 2px white;
+  margin: -2px;
+}
+
+/*# sourceMappingURL=profile.css.map */

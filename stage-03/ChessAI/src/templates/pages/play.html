@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block title %} Play Chess {% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/play.css') }}">
+  <script src="{{url_for('static', filename='js/play.js')}}"></script>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div id="sidebar">
+    <form class="container" method="post" id="match-form">
+        <div class="game-info">
+            <div class="button-wrapper" id="side-box">
+                <input type="hidden" name="side" id="side-input" value="" autocomplete='off'> 
+
+                <button type="button" onclick="setStart(this)" class="button-item" id="black">
+                    <img src="/static/images/black.png" alt="Black start" title="Black start"></img>
+                </button>
+
+                <button type="button" onclick="setStart(this)" class="button-item" id="rand">
+                    <img src="/static/images/random.png" alt="Random start" title="Random start"></img>
+                </button>
+                <button type="button" onclick="setStart(this)" class="button-item" id="white">
+                    <img src="/static/images/white.png" alt="White start" title="White start"></img>
+                </button>
+            </div>
+            <div class="dropdown-wrapper">
+                <div id="rating-box">
+                    <div class="dropdown-item">
+                        <label for="difficulty" class="text"> Bot Rating </label>
+                        <input type="hidden" name="difficulty" id="difficulty-input" value="" autocomplete='off'> 
+
+                        <div id="difficulty-text" class="text"> - </div>
+                        <button type="button" onclick="dropdown(this.id)" class="text dropdown-btn" id="difficulty">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown-content hidden" id="difficulty-values">
+
+                        {% for bot in bots %}
+                        <button type="button"  onclick="setDiff(this)" value="{{ bot['Rating'] }}">{{ bot['Rating'] }}</button>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+                <div id="time-box">
+                    <div class="dropdown-item">
+                        <label for="time" class="text"> Game Time </label>
+                        <input type="hidden" name="time" id="time-input" value="" autocomplete='off'> 
+
+                        <div id="time-text" class="text"> - </div>
+                        <button type="button" onclick="dropdown(this.id)" class="text dropdown-btn" id="time">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="dropdown-content hidden" id="time-values">
+
+                        {% for time in times %}
+                        <button type="button" onclick="setTime(this)" value="{{ time['Value'] }}">{{ time['Name'] }}</button>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="validation-wrapper hidden" id="validate">
+            <div class="validation-text hidden" id="validate-side"> - You must select starting side!</div>
+            <div class="validation-text hidden" id="validate-rating"> - You must select opponent rating!</div>
+            <div class="validation-text hidden" id="validate-time"> - You must select game duration!</div>
+        </div>
+
+
+        <button type="submit" class="button" title="Play match" id="submitBtn">
+            PLAY
+        </button>
+
+        <div class="validation-wrapper hidden" id="validate-flask">
+            {% for message in get_flashed_messages() %}
+                <div class="validation-text">{{ message }}</div>
+            {% endfor %}
+        </div>
+
+    </form>
+
+    <div class="container">
+        <div class="profile-wrapper">
+            <img id="avatar" src="{{ current_user.picture }}" alt="Avatar" title="{{current_user.username}}"> 
+            <div class="username"> {{current_user.username}}</div>
+        </div>
+    </div>
+
+</div>
+
+<div id="board-container">
+</div>
+
+{% endblock %}

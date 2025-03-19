@@ -1,0 +1,518 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ current_user.username }} - Profile {% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/css/profile.css') }}">
+  <script src="{{url_for('static', filename='js/profile.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const total = "{{total}}";
+    sessionStorage.setItem("total", total);
+  </script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container" style="height:fit-content;">
+  <div class="wrapper">
+
+    <div class="row">
+      <div class="item middle">
+        <img id="avatar" src="{{ current_user.picture }}" alt="Avatar failed to load..." title="{{ current_user.username }}'s Profile Picture"> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="item middle">
+        <div class="username" id="profile_username">
+          {{ current_user.username }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="item middle">
+          <hr>
+      </div>
+    </div>
+
+    <div class="row col">
+      <div class="item">
+        <div class="title"> Biography</div> 
+      </div>
+      <div class="item">
+        <div class="text" id="profile_biography"> {{ current_user.biography }}</div> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="item middle">
+          <hr>
+      </div>
+    </div>
+    
+    <div class="row col">
+      <div class="item middle">
+        <div class="title"> Account Information</div> 
+      </div>
+
+      <div class="row">
+        <div class="row col">
+          <div class="item middle">
+            <div class="icon" title="Account Created">
+              <i class="fa-solid fa-square-plus fa-2x fa-fw"></i>
+            </div>
+          </div>
+          <div class="item middle">
+            <div class="text"> {{ current_user.created[:10]}}</div> 
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row col">
+            <div class="item middle">
+              <div class="icon" title="Last Online">
+                <i class="fa-solid fa-earth-americas fa-2x fa-fw"></i>
+              </div>
+            </div>
+            <div class="item middle">
+              <div class="text" id="profile_status"> {{ current_user.online }}</div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row col">
+      
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-medal fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Achievements </div> 
+        </div>
+        <div class="item right">
+          <div class="text"> 0 </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-gamepad fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Games played </div> 
+        </div>
+        <div class="item right">
+          <div class="text"> 0 </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-user-group fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Friends </div> 
+        </div>
+        <div class="item right">
+          <div class="text"> 0 </div> 
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row col" >
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-circle-plus fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Total Won </div> 
+        </div>
+        <div class="item right">
+          <div class="text" id="profile_wins"> {{current_user.wins}} </div> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-circle-xmark fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Total Lost </div> 
+        </div>
+        <div class="item right">
+          <div class="text" id="profile_losses"> {{current_user.losses}} </div> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="item left">
+          <i class="fa-solid fa-circle-minus fa-fw"></i>
+        </div>
+        <div class="item">
+          <div class="text"> Total Drawn </div> 
+        </div>
+        <div class="item right">
+          <div class="text" id="profile_draws"> {{current_user.draws}} </div> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="margin-top: auto">
+      <div class="item middle">
+        <button class="button" onclick="edit(this)" type="submit" title="Create Account">
+          Edit profile
+        </button>      
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="wrapper">
+
+    <div class="row">
+      <button class="item middle selected" id="history-btn">
+        <div class="title"> History</div> 
+      </button>
+      <button class="item middle" id="badges-btn">
+        <div class="title"> Badges</div> 
+      </button>
+      <button class="item middle" id="friends-btn">
+        <div class="title"> Friends</div> 
+      </button>
+    </div>
+
+
+    <div id="history-section">
+
+      <div class="row col" id="recent">
+        <div class="item">
+          <div class="recent-container">
+            <div class="wrapper">
+  
+              <div class="row">
+  
+                <div class="item left">
+                  <div class="row col">
+                    <div class="item middle">
+                      Recent 20 Games
+                    </div>
+                    <div class="item middle" style="height:100px">
+                      <canvas id="donut"></canvas>
+                    </div>
+                    <div class="row">
+                      <div class="item middle" id="win-lose">
+                        0W 0L 0D
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row col">
+                  <div class="row">
+                    <div class="item middle">
+                      <button class="filter-btn selected-btn" id="toggle-all">
+                        <div class="text"> All</div> 
+                      </button>
+                    </div>
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-friends">
+                        <div class="text"> Friends only</div> 
+                      </button>
+                    </div>
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-bots">
+                        <div class="text"> Bots only</div> 
+                      </button>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-1minute">
+                        <div class="text"> 1 min</div> 
+                      </button>
+                    </div>
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-3minute">
+                        <div class="text"> 3 min</div> 
+                      </button>
+                    </div>
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-5minute">
+                        <div class="text"> 5 min</div> 
+                      </button>
+                    </div>
+                    <div class="item middle">
+                      <button class="filter-btn" id="toggle-10minute">
+                        <div class="text"> 10 min</div> 
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% if not games and not ongoing %}
+      <div class="item">
+        <div class="helper-container">
+          <div class="wrapper">
+
+            You have no Match History.
+    
+          </div>
+        </div>
+      </div>
+
+      {% else %}
+
+      {% if ongoing %}
+        <div class="row col" id="ongoing" style="padding-bottom: 20px;">
+        {% for game in ongoing|reverse %}
+          <a href="/game/bot/{{game.id}}" class="item" title="{{game.date[:-3]}}">
+
+          <div class="game-container ongoing" id='{{game.id}}'>
+
+            <div class="row">
+
+              <div class="col indent"></div>
+
+              <div class="col wrapper nogap">
+                <div class="row">
+                  <div class="event"> {{game.event}} </div>
+                </div>
+                <div class="row">
+                  <div class="date"> {{game.date[:10]}} </div>
+                </div>
+                <div class="row"> 
+                  <hr class="thin">
+                </div>
+                <div class="row">
+                  <div class="termination"> {{game.termination}} </div>
+                </div>
+                <div class="row">
+                  <div class="time"> {{game.time|string + " min"}} </div>
+                </div>
+              </div>
+
+              <div class="col wrapper nogap participants">
+                <div class="row">
+
+                  <div class="col player"> 
+                    <div class="player-white"> 
+                      <img src="{{current_user.picture}}" alt="Avatar" class="row middle pic"> </img>
+                    </div>
+                    <div class="row middle player-username"> 
+
+                      {% if game.computer.color == "white" %}
+                        {{game.computer.username}}
+
+                      {% else %}
+                        {{game.human.username}}
+
+                      {% endif %}
+
+                    </div>
+                  </div>
+                  
+                  <div class="col row middle result">{{game.result}}</div>
+
+                  <div class="col player">
+                    <div class="player-black"> 
+                      <img src="{{current_user.picture}}" alt="Avatar" class="row middle pic"> </img>
+                    </div>
+                    <div class="row middle player-username"> 
+
+                      {% if game.computer.color == "black" %}
+                      {{game.computer.username}}
+
+                      {% else %}
+                        {{game.human.username}}
+
+                      {% endif %}
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col wrapper nogap performance">
+                <div class="row">
+                  <div class="col">
+                    <div class="row middle"> Score</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          </a>
+        {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="row col" id="completed"  style="padding-bottom: 20px;">
+      {% for game in games|reverse %}
+        <a href="/game/bot/{{game.id}}" class="item" title="{{game.date[:-3]}}">
+
+          {% if game.result == "1-0" and game.human.color == "white" %}
+          <div class="game-container win" id='{{game.id}}'>
+          {% elif game.result == "1-0" and game.human.color == "black" %}
+          <div class="game-container lose" id='{{game.id}}'>
+          {% elif game.result == "0-1" and game.human.color == "white" %}
+          <div class="game-container lose" id='{{game.id}}'>
+          {% elif game.result == "0-1" and game.human.color == "black" %}
+          <div class="game-container win" id='{{game.id}}'>
+
+          {% elif game.result == "1/2-1/2" %}
+          <div class="game-container draw" id='{{game.id}}'>
+          {% endif %}
+
+
+            <div class="row">
+
+              <div class="col indent"></div>
+
+              <div class="col wrapper nogap">
+                <div class="row">
+                  <div class="event"> {{game.event}} </div>
+                </div>
+                <div class="row">
+                  <div class="date"> {{game.date[:10]}} </div>
+                </div>
+                <div class="row"> 
+                  <hr class="thin">
+                </div>
+                <div class="row">
+                  <div class="termination"> {{game.termination}} </div>
+                </div>
+                <div class="row">
+                  <div class="time"> {{game.time|string + " min"}} </div>
+                </div>
+              </div>
+
+              <div class="col wrapper nogap participants">
+                <div class="row">
+
+                  <div class="col player"> 
+                    <div class="player-white"> 
+                      <img src="{{current_user.picture}}" alt="Avatar" class="row middle pic"> </img>
+                    </div>
+                    <div class="row middle player-username"> 
+
+                      {% if game.computer.color == "white" %}
+                        {{game.computer.username}}
+
+                      {% else %}
+                        {{game.human.username}}
+
+                      {% endif %}
+
+                    </div>
+                  </div>
+                  
+                  <div class="col row middle result">{{game.result}}</div>
+
+                  <div class="col player">
+                    <div class="player-black"> 
+                      <img src="{{current_user.picture}}" alt="Avatar" class="row middle pic"> </img>
+                    </div>
+                    <div class="row middle player-username"> 
+
+                      {% if game.computer.color == "black" %}
+                      {{game.computer.username}}
+
+                      {% else %}
+                        {{game.human.username}}
+
+                      {% endif %}
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="col wrapper nogap performance">
+                <div class="row">
+                  <div class="col">
+                    <div class="row middle"> Score</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </a>
+      {% endfor %}
+      </div>
+
+      <a href="" class="item" id="more">
+        <div class="load-container">
+          <div class="wrapper"> 
+
+            SHOW MORE
+    
+          </div>
+        </div>
+      </a>
+
+      <div class="row col" id="total">
+        <div class="item right">
+
+          {% if games|length > 0 %}
+          
+          <div class="showing text">
+            (Displaying {{games|length}} of {{total}} finished games)
+          </div>
+
+          {% endif %}
+
+        </div>
+      </div>
+    
+      {% endif %}
+
+    </div>
+
+    <div class="row col hidden" id="badges-section">
+      <div class="item">
+        <div class="helper-container">
+          <div class="wrapper">
+
+            You have no Badges.
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row col hidden" id="friends-section">
+      <div class="item">
+        <div class="helper-container">
+          <div class="wrapper">
+
+            You have no Friends.
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+{% endblock %}
