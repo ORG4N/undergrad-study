@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/advanced-computing-networking-infrastructures/blob/main/docs/images/3004.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-03/advanced-computing-networking-infrastructures/docs/images/3004.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
