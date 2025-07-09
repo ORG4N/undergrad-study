@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/information-management-and-retrieval/blob/main/docs/images/2001.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-02/information-management-and-retrieval/docs/images/2001.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
