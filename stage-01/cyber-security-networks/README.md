@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/cyber-security-networks/blob/main/docs/images/1002.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-01/cyber-security-networks/docs/images/1002.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
