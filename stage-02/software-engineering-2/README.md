@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/software-engineering-2/blob/main/docs/images/2000.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-02/software-engineering-2/docs/images/2000.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
