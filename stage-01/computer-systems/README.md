@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/computer-systems/blob/main/docs/images/1001.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-01/computer-systems/docs/images/1001.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
