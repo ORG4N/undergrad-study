@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/algorithms-data-structures-and-mathematics/blob/main/docs/images/1003.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-01/algorithms-data-structures-and-mathematics/docs/images/1003.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
