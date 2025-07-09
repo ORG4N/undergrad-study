@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/machine-learning/blob/main/docs/images/3003.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-03/machine-learning/docs/images/3003.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
