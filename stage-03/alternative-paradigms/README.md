@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/alternative-paradigms/blob/main/docs/images/3002.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-03/alternative-paradigms/docs/images/3002.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
