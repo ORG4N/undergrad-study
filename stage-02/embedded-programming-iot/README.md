@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/embedded-programming-iot/blob/main/docs/images/2004.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-02/embedded-programming-iot/docs/images/2004.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
