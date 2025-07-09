@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/parallel-computing/blob/main/docs/images/3001.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-03/parallel-computing/docs/images/3001.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
