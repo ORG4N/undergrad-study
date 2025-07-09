@@ -1,4 +1,4 @@
-![title image](https://github.com/ORG4N/artificial-intelligence/blob/main/docs/images/2002.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-02/artificial-intelligence/docs/images/2002.png)
 
 <p align="center"><strong>Module Overview</strong>
 <br>
