@@ -2,7 +2,7 @@
 
 **WARNING: This game is not suitable for people who are prone to seizures, such as in the context of epilepsy. This is due to the excessive amount of flickering that happens when repeatedly writing to the console. PROCEED WITH CAUTION!**
 
-![title image](https://github.com/ORG4N/software-engineering-1/blob/master/docs/images/Title.png)
+![title image](https://github.com/ORG4N/undergrad-study/blob/main/stage-01/software-engineering-1/docs/images/Title.png)
 > As part of my Software Engineering 1 module I have been tasked to create a Dungeon Crawler console game using a given codebase. 
 
 CMD DUNGEON is an exciting but compact game that has been designed for Command Line Interfaces. From slaying monsters to collecting gold, CMD DUNGEON takes the player on a high-risk adventure within the Command Line.
